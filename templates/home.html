@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>HomePage</title>
+</head>
+
+<body>
+    <center>
+        
+            <br><br><br><br><br><br><br>
+            <div style="padding:100px;background-color:khaki;margin:0px 30%;border-radius:10px">
+            <h1>Homepage</h1><br>
+            {% if user.is_authenticated %}
+            
+                <span style=''><a href="{% url 'live_camera' %}">View Camera(Login required)</a></span>
+            
+            {% else %}
+            
+                <span><a href="{% url 'login' %}">Login(Befor View Camera)</a></span>
+            {% endif %}
+        </div>
+    </center>
+
+</body>
+</html>
